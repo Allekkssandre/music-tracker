@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+    <h1>Users en DB</h1>
+    
+    {% for user in users %}
+        <p>{{ user.name }} - {{ user.email }}</p>
+    {% endfor %}
+</body>
+</html>
