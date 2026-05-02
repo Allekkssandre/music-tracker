@@ -17,4 +17,6 @@ RUN composer install
 
 EXPOSE 8000
 
+RUN php bin/console doctrine:migrations:migrate --no-interaction || true
+
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
